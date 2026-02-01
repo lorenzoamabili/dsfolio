@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Me as a data scientist"
+  description: "Some of my data science and machine learning projects."
+  favicon: assets/favicon.ico
+
+  navbar:
+    background: "#FFFFFE"
+    foreground: "#2B2C34"
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+    right:
+      - icon: github
+        href: "https://github.com/lorenzoamabili"
+      - icon: linkedin
+        href: "https://it.linkedin.com/in/lorenzoamabili"
+
+  page-footer:
+    background: "#F8F9FA"
+    foreground: "#6B7280"
+    center: "© 2026 Lorenzo Amabili. All rights reserved."
+
+format:
+  html:
+    theme: cosmo
+    css: styles/custom.css
+    highlight-style: tango
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    smooth-scroll: true
+    code-fold: show
+    code-tools: true
+    code-overflow: wrap
+    code-line-numbers: false
+    fig-width: 10
+    fig-height: 6
+    df-print: paged
+    include-in-header: templates/meta.html
+    minimal: false
+
+execute:
+  enabled: false
+  freeze: auto

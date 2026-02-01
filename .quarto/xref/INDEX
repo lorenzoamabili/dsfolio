@@ -1,0 +1,62 @@
+{
+  "about.qmd": {
+    "about.html": "263e7aa5"
+  },
+  "CHANGELOG.md": {
+    "CHANGELOG.html": "19bfe6ab"
+  },
+  "index.qmd": {
+    "index.html": "e52a53c3"
+  },
+  "projects/01_ADV_Sensor_Data_Analysis.ipynb": {
+    "01_ADV_Sensor_Data_Analysis.html": "90b4c0dd"
+  },
+  "projects/01_Sensor_Data_Analysis.ipynb": {
+    "01_Sensor_Data_Analysis.html": "618e0631"
+  },
+  "projects/02_ADV_Time_Series_Forecasting.ipynb": {
+    "02_ADV_Time_Series_Forecasting.html": "21675752"
+  },
+  "projects/02_Time_Series_Forecasting.ipynb": {
+    "02_Time_Series_Forecasting.html": "bf104425"
+  },
+  "projects/03_ADV_Anomaly_Detection.ipynb": {
+    "03_ADV_Anomaly_Detection.html": "21baa34a"
+  },
+  "projects/03_Anomaly_Detection.ipynb": {
+    "03_Anomaly_Detection.html": "4a1885a3"
+  },
+  "projects/04_ADV_Process_Optimization.ipynb": {
+    "04_ADV_Process_Optimization.html": "faa05d4c"
+  },
+  "projects/04_Process_Optimization.ipynb": {
+    "04_Process_Optimization.html": "b6994161"
+  },
+  "projects/05_ADV_Fault_Classification_ML.ipynb": {
+    "05_ADV_Fault_Classification_ML.html": "df59339c"
+  },
+  "projects/05_Fault_Classification_ML.ipynb": {
+    "05_Fault_Classification_ML.html": "071a9a3d"
+  },
+  "projects/06_ADV_Process_Data_SPC.ipynb": {
+    "06_ADV_Process_Data_SPC.html": "da631fa5"
+  },
+  "projects/06_Process_Data_SPC.ipynb": {
+    "06_Process_Data_SPC.html": "8af53d12"
+  },
+  "projects/07_ADV_Quality_Defect_Prediction.ipynb": {
+    "07_ADV_Quality_Defect_Prediction.html": "c217332e"
+  },
+  "projects/07_Quality_Defect_Prediction.ipynb": {
+    "07_Quality_Defect_Prediction.html": "ee146a81"
+  },
+  "projects/index.qmd": {
+    "index.html": "a86647a6"
+  },
+  "QUICKSTART.md": {
+    "QUICKSTART.html": "37dff8e1"
+  },
+  "TROUBLESHOOTING.md": {
+    "TROUBLESHOOTING.html": "321bf960"
+  }
+}

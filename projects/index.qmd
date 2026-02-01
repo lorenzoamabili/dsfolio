@@ -1,0 +1,399 @@
+---
+title: "Projects"
+page-layout: full
+include-sidebar: false
+format:
+  html:
+    css: custom.css
+---
+
+::: {.projects-header}
+# Data Science Projects
+
+Data science projects spanning EDA, ML, optimization, and process control.
+
+::: {.search-filter-container}
+<input type="text" id="searchBox" class="search-box" placeholder="🔍 Search projects..." onkeyup="searchProjects()">
+
+::: {.filter-bar}
+<button class="filter-btn active" onclick="filterProjects('all')">All <span class="count">(14)</span></button>
+<button class="filter-btn" onclick="filterProjects('basic')">Foundational <span class="count">(7)</span></button>
+<button class="filter-btn" onclick="filterProjects('advanced')">Advanced <span class="count">(7)</span></button>
+<button class="filter-btn" onclick="filterProjects('eda')">EDA <span class="count">(2)</span></button>
+<button class="filter-btn" onclick="filterProjects('ml')">Machine Learning <span class="count">(8)</span></button>
+<button class="filter-btn" onclick="filterProjects('timeseries')">Time Series <span class="count">(2)</span></button>
+:::
+:::
+:::
+
+## Foundational Projects {.section-divider}
+
+::: {#projects-container .project-grid}
+
+::: {.project-card data-tags="basic eda pandas sensor scipy seaborn" data-keywords="sensor gas industrial correlation drift exploration foundational"}
+::: {.card-tags}
+<span class="tag tag-level">Foundational</span>
+<span class="tag tag-primary">EDA</span>
+<span class="tag tag-secondary">Pandas</span>
+<span class="tag tag-secondary">Seaborn</span>
+:::
+
+### Industrial Sensor Data Analysis
+
+Deep-dive exploratory analysis of 16-channel gas sensor array with 65k+ timestamped readings. Identified cross-sensor correlations using heatmaps, quantified temporal drift with rolling statistics, and segmented response patterns by gas type.
+
+::: {.card-metrics}
+<span class="metric"><strong>65k+</strong> readings</span>
+<span class="metric"><strong>16</strong> sensors</span>
+<span class="metric"><strong>5</strong> gases</span>
+:::
+
+<a href="01_Sensor_Data_Analysis.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card data-tags="basic ml timeseries forecasting gbm" data-keywords="energy forecast prediction lag rolling features foundational"}
+::: {.card-tags}
+<span class="tag tag-level">Foundational</span>
+<span class="tag tag-primary">Time Series</span>
+<span class="tag tag-ml">ML</span>
+<span class="tag tag-secondary">Gradient Boosting</span>
+:::
+
+### Energy Consumption Forecasting
+
+Built and compared three forecasting models (Ridge, RF, GB) on 10-minute resolution energy data. Engineered temporal features, lag features (1h-1d), and rolling statistics. GB achieved R² 0.85+ with residual analysis.
+
+::: {.card-metrics}
+<span class="metric"><strong>20k</strong> samples</span>
+<span class="metric"><strong>R² 0.85+</strong></span>
+<span class="metric"><strong>10min</strong> freq</span>
+:::
+
+<a href="02_Time_Series_Forecasting.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card data-tags="basic ml anomaly isolation pca" data-keywords="anomaly detection outlier isolation forest foundational"}
+::: {.card-tags}
+<span class="tag tag-level">Foundational</span>
+<span class="tag tag-ml">ML</span>
+<span class="tag tag-secondary">Isolation Forest</span>
+<span class="tag tag-secondary">PCA</span>
+:::
+
+### Multivariate Anomaly Detection
+
+Implemented three strategies (Z-Score, Isolation Forest, PCA reconstruction) on 5-channel sensor streams. Detected point, contextual, and collective anomalies with 90%+ recall. Ensemble recommended for production.
+
+::: {.card-metrics}
+<span class="metric"><strong>3</strong> methods</span>
+<span class="metric"><strong>90%+</strong> recall</span>
+<span class="metric"><strong>5</strong> channels</span>
+:::
+
+<a href="03_Anomaly_Detection.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card data-tags="basic optimization bayesian surrogate" data-keywords="optimization differential evolution yield manufacturing foundational"}
+::: {.card-tags}
+<span class="tag tag-level">Foundational</span>
+<span class="tag tag-primary">Optimization</span>
+<span class="tag tag-ml">Surrogate Model</span>
+<span class="tag tag-secondary">Scipy</span>
+:::
+
+### Manufacturing Yield Optimization
+
+Used differential evolution with GB surrogate to maximize yield across 5 parameters. Latin Hypercube sampling, OAT sensitivity analysis, and global optimization identified optimal settings validated against simulator.
+
+::: {.card-metrics}
+<span class="metric"><strong>5</strong> params</span>
+<span class="metric"><strong>300</strong> samples</span>
+<span class="metric"><strong>95%+</strong> yield</span>
+:::
+
+<a href="04_Process_Optimization.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card data-tags="basic ml classification rf svm" data-keywords="fault classification vibration maintenance predictive foundational"}
+::: {.card-tags}
+<span class="tag tag-level">Foundational</span>
+<span class="tag tag-ml">ML</span>
+<span class="tag tag-primary">Classification</span>
+<span class="tag tag-secondary">Random Forest</span>
+:::
+
+### Predictive Maintenance & Fault Diagnosis
+
+Multi-class classification of machine states from vibration sensors. Extracted 12 statistical features (RMS, kurtosis, crest factor). Compared RF, GB, SVM with stratified CV. 95%+ accuracy with clear PCA separation.
+
+::: {.card-metrics}
+<span class="metric"><strong>95%+</strong> accuracy</span>
+<span class="metric"><strong>4</strong> classes</span>
+<span class="metric"><strong>2k</strong> samples</span>
+:::
+
+<a href="05_Fault_Classification_ML.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card data-tags="basic spc monitoring control cusum" data-keywords="spc statistical process control chart capability foundational"}
+::: {.card-tags}
+<span class="tag tag-level">Foundational</span>
+<span class="tag tag-primary">SPC</span>
+<span class="tag tag-secondary">Control Charts</span>
+<span class="tag tag-secondary">CUSUM</span>
+:::
+
+### Statistical Process Control & Monitoring
+
+Implemented I-MR control charts for 4 variables with UCL/LCL detection. Calculated Cpk indices for capability assessment. Applied CUSUM for early drift detection. Detected 100% of injected faults.
+
+::: {.card-metrics}
+<span class="metric"><strong>4</strong> variables</span>
+<span class="metric"><strong>100%</strong> detection</span>
+<span class="metric"><strong>3</strong> methods</span>
+:::
+
+<a href="06_Process_Data_SPC.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card data-tags="basic ml quality prediction logistic" data-keywords="quality defect prediction root cause manufacturing foundational"}
+::: {.card-tags}
+<span class="tag tag-level">Foundational</span>
+<span class="tag tag-ml">ML</span>
+<span class="tag tag-primary">Quality Analytics</span>
+<span class="tag tag-secondary">Root Cause</span>
+:::
+
+### Manufacturing Quality & Defect Prediction
+
+End-to-end quality pipeline: root-cause via logistic coefficients identified temperature, humidity, operator experience as drivers. Built prediction models with imbalance handling. GB achieved 0.92 AUC on 5k records.
+
+::: {.card-metrics}
+<span class="metric"><strong>0.92</strong> AUC</span>
+<span class="metric"><strong>5k</strong> records</span>
+<span class="metric"><strong>9</strong> features</span>
+:::
+
+<a href="07_Quality_Defect_Prediction.ipynb" class="card-link">View Analysis →</a>
+:::
+
+:::
+
+## Advanced Projects {.section-divider}
+
+::: {.project-grid}
+
+::: {.project-card data-tags="advanced eda transfer-entropy wavelet" data-keywords="sensor advanced causal transfer entropy wavelet dtw"}
+::: {.card-tags}
+<span class="tag tag-advanced">Advanced</span>
+<span class="tag tag-primary">EDA</span>
+<span class="tag tag-secondary">Transfer Entropy</span>
+<span class="tag tag-secondary">Wavelets</span>
+:::
+
+### Advanced Sensor Data Analysis
+
+Extended analysis with transfer entropy for causal inference between sensor pairs, wavelet decomposition for multi-scale temporal patterns, and dynamic time warping for pattern matching. Sophisticated signal processing beyond basic EDA.
+
+::: {.card-metrics}
+<span class="metric"><strong>Transfer Entropy</strong></span>
+<span class="metric"><strong>Wavelets</strong></span>
+<span class="metric"><strong>DTW</strong></span>
+:::
+
+<a href="01_ADV_Sensor_Data_Analysis.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card data-tags="advanced ml timeseries lstm prophet" data-keywords="advanced forecasting lstm prophet deep learning neural"}
+::: {.card-tags}
+<span class="tag tag-advanced">Advanced</span>
+<span class="tag tag-primary">Time Series</span>
+<span class="tag tag-ml">Deep Learning</span>
+<span class="tag tag-secondary">LSTM</span>
+:::
+
+### Advanced Time Series Forecasting
+
+Deep learning approaches with LSTM/GRU networks for sequence-to-sequence prediction. Compared with Prophet for automated seasonality detection. Feature engineering with Fourier transforms and external regressors.
+
+::: {.card-metrics}
+<span class="metric"><strong>LSTM</strong></span>
+<span class="metric"><strong>Prophet</strong></span>
+<span class="metric"><strong>Seq2Seq</strong></span>
+:::
+
+<a href="02_ADV_Time_Series_Forecasting.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card data-tags="advanced ml anomaly vae lstm autoencoder" data-keywords="advanced anomaly vae lstm autoencoder deep learning"}
+::: {.card-tags}
+<span class="tag tag-advanced">Advanced</span>
+<span class="tag tag-ml">Deep Learning</span>
+<span class="tag tag-secondary">VAE</span>
+<span class="tag tag-secondary">LSTM-AE</span>
+:::
+
+### Advanced Anomaly Detection
+
+Deep learning anomaly detection with Variational Autoencoders (VAE) and LSTM-Autoencoders for temporal anomalies. Comparison with classical methods. Bayesian approaches for uncertainty quantification in anomaly scores.
+
+::: {.card-metrics}
+<span class="metric"><strong>VAE</strong></span>
+<span class="metric"><strong>LSTM-AE</strong></span>
+<span class="metric"><strong>Bayesian</strong></span>
+:::
+
+<a href="03_ADV_Anomaly_Detection.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card data-tags="advanced optimization genetic multi-objective" data-keywords="advanced optimization genetic algorithm pareto multi-objective"}
+::: {.card-tags}
+<span class="tag tag-advanced">Advanced</span>
+<span class="tag tag-primary">Optimization</span>
+<span class="tag tag-secondary">Genetic Algorithms</span>
+<span class="tag tag-secondary">Multi-Objective</span>
+:::
+
+### Advanced Process Optimization
+
+Multi-objective optimization with Pareto frontiers trading off yield, cost, and quality. Genetic algorithms for complex constraint handling. Robust optimization under uncertainty with Monte Carlo simulation.
+
+::: {.card-metrics}
+<span class="metric"><strong>Pareto</strong></span>
+<span class="metric"><strong>Genetic</strong></span>
+<span class="metric"><strong>Robust</strong></span>
+:::
+
+<a href="04_ADV_Process_Optimization.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card data-tags="advanced ml classification xgboost shap" data-keywords="advanced classification xgboost shap interpretability ensemble"}
+::: {.card-tags}
+<span class="tag tag-advanced">Advanced</span>
+<span class="tag tag-ml">ML</span>
+<span class="tag tag-secondary">XGBoost</span>
+<span class="tag tag-secondary">SHAP</span>
+:::
+
+### Advanced Fault Classification
+
+State-of-the-art ensemble methods (XGBoost, LightGBM, CatBoost) with hyperparameter tuning via Optuna. SHAP values for model interpretability. Calibration plots and threshold optimization for imbalanced classes.
+
+::: {.card-metrics}
+<span class="metric"><strong>XGBoost</strong></span>
+<span class="metric"><strong>SHAP</strong></span>
+<span class="metric"><strong>Optuna</strong></span>
+:::
+
+<a href="05_ADV_Fault_Classification_ML.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card data-tags="advanced spc multivariate ewma" data-keywords="advanced spc multivariate hotelling ewma pca monitoring"}
+::: {.card-tags}
+<span class="tag tag-advanced">Advanced</span>
+<span class="tag tag-primary">SPC</span>
+<span class="tag tag-secondary">Multivariate</span>
+<span class="tag tag-secondary">Hotelling T²</span>
+:::
+
+### Advanced Statistical Process Control
+
+Multivariate SPC with Hotelling T² charts, MEWMA (Multivariate EWMA), and PCA-based monitoring for high-dimensional processes. Change point detection algorithms and adaptive control limits.
+
+::: {.card-metrics}
+<span class="metric"><strong>Hotelling T²</strong></span>
+<span class="metric"><strong>MEWMA</strong></span>
+<span class="metric"><strong>PCA</strong></span>
+:::
+
+<a href="06_ADV_Process_Data_SPC.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card data-tags="advanced ml quality causal inference" data-keywords="advanced quality causal inference propensity matching dag"}
+::: {.card-tags}
+<span class="tag tag-advanced">Advanced</span>
+<span class="tag tag-ml">ML</span>
+<span class="tag tag-secondary">Causal Inference</span>
+<span class="tag tag-secondary">Propensity</span>
+:::
+
+### Advanced Quality & Causal Analysis
+
+Causal inference for quality root-cause using propensity score matching and DAGs. Counterfactual analysis "what-if" scenarios. Cost-sensitive learning for optimizing inspection/defect trade-offs.
+
+::: {.card-metrics}
+<span class="metric"><strong>Causal</strong></span>
+<span class="metric"><strong>DAG</strong></span>
+<span class="metric"><strong>Cost-Sensitive</strong></span>
+:::
+
+<a href="07_ADV_Quality_Defect_Prediction.ipynb" class="card-link">View Analysis →</a>
+:::
+
+:::
+
+::: {#noResults .no-results style="display: none;"}
+No projects match your search. Try different keywords or clear filters.
+:::
+
+```{=html}
+<script>
+const tagMap = {
+  basic: ['basic'],
+  advanced: ['advanced'],
+  eda: ['eda'],
+  ml: ['ml', 'classification', 'anomaly', 'quality', 'prediction'],
+  timeseries: ['timeseries', 'forecasting']
+};
+
+function filterProjects(category) {
+  document.getElementById('searchBox').value = '';
+  
+  const buttons = document.querySelectorAll('.filter-btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  const cards = document.querySelectorAll('.project-card');
+  let visibleCount = 0;
+  
+  cards.forEach(card => {
+    if (category === 'all') {
+      card.style.display = 'block';
+      visibleCount++;
+      return;
+    }
+    const tags = card.getAttribute('data-tags') || '';
+    const match = (tagMap[category] || []).some(t => tags.includes(t));
+    card.style.display = match ? 'block' : 'none';
+    if (match) visibleCount++;
+  });
+  
+  document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+}
+
+function searchProjects() {
+  const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+  const cards = document.querySelectorAll('.project-card');
+  let visibleCount = 0;
+  
+  if (searchTerm) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+  }
+  
+  cards.forEach(card => {
+    const title = card.querySelector('h3').textContent.toLowerCase();
+    const description = card.querySelector('p').textContent.toLowerCase();
+    const tags = card.getAttribute('data-tags') || '';
+    const keywords = card.getAttribute('data-keywords') || '';
+    
+    const searchable = `${title} ${description} ${tags} ${keywords}`.toLowerCase();
+    const match = searchable.includes(searchTerm);
+    
+    card.style.display = match ? 'block' : 'none';
+    if (match) visibleCount++;
+  });
+  
+  document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+}
+</script>
+```

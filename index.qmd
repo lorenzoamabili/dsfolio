@@ -1,0 +1,285 @@
+---
+title: "Home"
+page-layout: full
+include-sidebar: false
+---
+
+::: {.hero-section}
+::: {.hero-content}
+<span class="hero-tag">👋 Data Scientist & ML Engineer</span>
+
+# Transforming <span class="accent">raw data</span><br>into <span class="accent">actionable intelligence</span> {.hero-title}
+
+<p class="hero-subtitle">
+  14 production-grade data science projects spanning exploratory analysis, machine learning, 
+  optimization, and statistical process control. <strong>Real implementations. Real results.</strong>
+</p>
+
+::: {.hero-stats}
+::: {.stat-item}
+<span class="stat-number">14</span>
+<span class="stat-label">Projects</span>
+:::
+
+::: {.stat-item}
+<span class="stat-number">100%</span>
+<span class="stat-label">Open Source</span>
+:::
+:::
+
+::: {.hero-cta}
+<a href="projects/index.qmd" class="cta-button primary">
+  <span>Explore All Projects</span>
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</a>
+<a href="#tech-stack" class="cta-button secondary">View Tech Stack</a>
+:::
+:::
+:::
+
+---
+
+## Featured Foundational Projects {.section-title}
+
+::: {.project-grid}
+
+::: {.project-card}
+::: {.card-tags}
+<span class="tag tag-level">Foundational</span>
+<span class="tag tag-primary">EDA</span>
+<span class="tag tag-secondary">Pandas</span>
+<span class="tag tag-secondary">Seaborn</span>
+:::
+
+### Industrial Sensor Data Analysis
+
+Deep-dive exploratory analysis of 16-channel gas sensor array with 65k+ timestamped readings. Identified cross-sensor correlations using heatmaps, quantified temporal drift with rolling statistics, and segmented response patterns by gas type.
+
+::: {.card-metrics}
+<span class="metric"><strong>65k+</strong> readings</span>
+<span class="metric"><strong>16</strong> sensors</span>
+<span class="metric"><strong>5</strong> gases</span>
+:::
+
+<a href="projects/01_Sensor_Data_Analysis.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card}
+::: {.card-tags}
+<span class="tag tag-level">Foundational</span>
+<span class="tag tag-primary">Time Series</span>
+<span class="tag tag-ml">ML</span>
+<span class="tag tag-secondary">Gradient Boosting</span>
+:::
+
+### Energy Consumption Forecasting
+
+Built and compared three forecasting models (Ridge, RF, GB) on 10-minute resolution energy data. Engineered temporal features, lag features (1h-1d), and rolling statistics. GB achieved R² 0.85+ with residual analysis.
+
+::: {.card-metrics}
+<span class="metric"><strong>20k</strong> samples</span>
+<span class="metric"><strong>R² 0.85+</strong></span>
+<span class="metric"><strong>10min</strong> freq</span>
+:::
+
+<a href="projects/02_Time_Series_Forecasting.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card}
+::: {.card-tags}
+<span class="tag tag-level">Foundational</span>
+<span class="tag tag-ml">ML</span>
+<span class="tag tag-secondary">Isolation Forest</span>
+<span class="tag tag-secondary">PCA</span>
+:::
+
+### Multivariate Anomaly Detection
+
+Implemented three strategies (Z-Score, Isolation Forest, PCA reconstruction) on 5-channel sensor streams. Detected point, contextual, and collective anomalies with 90%+ recall. Ensemble recommended for production.
+
+::: {.card-metrics}
+<span class="metric"><strong>3</strong> methods</span>
+<span class="metric"><strong>90%+</strong> recall</span>
+<span class="metric"><strong>5</strong> channels</span>
+:::
+
+<a href="projects/03_Anomaly_Detection.ipynb" class="card-link">View Analysis →</a>
+:::
+
+:::
+
+---
+
+## Featured Advanced Projects {.section-title}
+
+::: {.project-grid}
+
+::: {.project-card}
+::: {.card-tags}
+<span class="tag tag-advanced">Advanced</span>
+<span class="tag tag-primary">EDA</span>
+<span class="tag tag-secondary">Transfer Entropy</span>
+<span class="tag tag-secondary">Wavelets</span>
+:::
+
+### Advanced Sensor Data Analysis
+
+Extended analysis with transfer entropy for causal inference between sensor pairs, wavelet decomposition for multi-scale temporal patterns, and dynamic time warping for pattern matching. Sophisticated signal processing beyond basic EDA.
+
+::: {.card-metrics}
+<span class="metric"><strong>Transfer Entropy</strong></span>
+<span class="metric"><strong>Wavelets</strong></span>
+<span class="metric"><strong>DTW</strong></span>
+:::
+
+<a href="projects/01_ADV_Sensor_Data_Analysis.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card}
+::: {.card-tags}
+<span class="tag tag-advanced">Advanced</span>
+<span class="tag tag-primary">Time Series</span>
+<span class="tag tag-ml">Deep Learning</span>
+<span class="tag tag-secondary">LSTM</span>
+:::
+
+### Advanced Time Series Forecasting
+
+Deep learning approaches with LSTM/GRU networks for sequence-to-sequence prediction. Compared with Prophet for automated seasonality detection. Feature engineering with Fourier transforms and external regressors.
+
+::: {.card-metrics}
+<span class="metric"><strong>LSTM</strong></span>
+<span class="metric"><strong>Prophet</strong></span>
+<span class="metric"><strong>Seq2Seq</strong></span>
+:::
+
+<a href="projects/02_ADV_Time_Series_Forecasting.ipynb" class="card-link">View Analysis →</a>
+:::
+
+::: {.project-card}
+::: {.card-tags}
+<span class="tag tag-advanced">Advanced</span>
+<span class="tag tag-ml">Deep Learning</span>
+<span class="tag tag-secondary">VAE</span>
+<span class="tag tag-secondary">LSTM-AE</span>
+:::
+
+### Advanced Anomaly Detection
+
+Deep learning anomaly detection with Variational Autoencoders (VAE) and LSTM-Autoencoders for temporal anomalies. Comparison with classical methods. Bayesian approaches for uncertainty quantification in anomaly scores.
+
+::: {.card-metrics}
+<span class="metric"><strong>VAE</strong></span>
+<span class="metric"><strong>LSTM-AE</strong></span>
+<span class="metric"><strong>Bayesian</strong></span>
+:::
+
+<a href="projects/03_ADV_Anomaly_Detection.ipynb" class="card-link">View Analysis →</a>
+:::
+
+:::
+
+::: {.view-all-section}
+<a href="projects/index.qmd" class="view-all-link">
+  View All 14 Projects 
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</a>
+:::
+
+---
+
+## Tech Stack & Tools {#tech-stack .section-title}
+
+::: {.stack-container}
+::: {.stack-category}
+<h3 class="category-title">Core Data Science</h3>
+::: {.stack-grid}
+<div class="stack-item">
+  <span class="stack-icon">🐍</span>
+  <span class="stack-name">Python</span>
+</div>
+<div class="stack-item">
+  <span class="stack-icon">📊</span>
+  <span class="stack-name">Pandas</span>
+</div>
+<div class="stack-item">
+  <span class="stack-icon">🔢</span>
+  <span class="stack-name">NumPy</span>
+</div>
+<div class="stack-item">
+  <span class="stack-icon">📈</span>
+  <span class="stack-name">Scipy</span>
+</div>
+:::
+:::
+
+::: {.stack-category}
+<h3 class="category-title">Machine Learning</h3>
+::: {.stack-grid}
+<div class="stack-item">
+  <span class="stack-icon">🤖</span>
+  <span class="stack-name">Scikit-learn</span>
+</div>
+<div class="stack-item">
+  <span class="stack-icon">⚡</span>
+  <span class="stack-name">XGBoost</span>
+</div>
+<div class="stack-item">
+  <span class="stack-icon">🌲</span>
+  <span class="stack-name">LightGBM</span>
+</div>
+<div class="stack-item">
+  <span class="stack-icon">🎯</span>
+  <span class="stack-name">CatBoost</span>
+</div>
+:::
+:::
+
+::: {.stack-category}
+<h3 class="category-title">Deep Learning</h3>
+::: {.stack-grid}
+<div class="stack-item">
+  <span class="stack-icon">🧠</span>
+  <span class="stack-name">PyTorch</span>
+</div>
+<div class="stack-item">
+  <span class="stack-icon">🔥</span>
+  <span class="stack-name">TensorFlow</span>
+</div>
+<div class="stack-item">
+  <span class="stack-icon">⚡</span>
+  <span class="stack-name">Keras</span>
+</div>
+<div class="stack-item">
+  <span class="stack-icon">🤗</span>
+  <span class="stack-name">Transformers</span>
+</div>
+:::
+:::
+
+::: {.stack-category}
+<h3 class="category-title">Visualization</h3>
+::: {.stack-grid}
+<div class="stack-item">
+  <span class="stack-icon">🎨</span>
+  <span class="stack-name">Seaborn</span>
+</div>
+<div class="stack-item">
+  <span class="stack-icon">📉</span>
+  <span class="stack-name">Matplotlib</span>
+</div>
+<div class="stack-item">
+  <span class="stack-icon">📊</span>
+  <span class="stack-name">Plotly</span>
+</div>
+<div class="stack-item">
+  <span class="stack-icon">🗺️</span>
+  <span class="stack-name">Altair</span>
+</div>
+:::
+:::
+:::
